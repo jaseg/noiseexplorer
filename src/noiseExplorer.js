@@ -242,6 +242,7 @@ if (
 		.replace("$NOISE2RS_S$", psk)
 		.replace("$NOISE2RS_T$", testGen)
 		.replace(/\$NOISE2RS_N\$/g, json.name.toLowerCase());
+	let license = READFILE('../LICENSE.md')
 	if (!FS.existsSync(`../implementations/rs/${json.name}`)) {
 		FS.mkdirSync(`../implementations/rs/${json.name}`);
 		FS.mkdirSync(`../implementations/rs/${json.name}/src`);
@@ -257,6 +258,7 @@ if (
 	WRITEFILE(`../implementations/rs/${json.name}/src/error.rs`, output[7]);
 	WRITEFILE(`../implementations/rs/${json.name}/Cargo.toml`, cargo);
 	WRITEFILE(`../implementations/rs/${json.name}/tests/handshake.rs`, test);
+	WRITEFILE(`../implementations/rs/${json.name}/LICENSE.md`, license);
 	process.exit();
 }
 

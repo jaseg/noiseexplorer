@@ -3,6 +3,7 @@ name = "noiseexplorer_k1k"
 version = "0.1.2"
 authors = ["Symbolic Software <georgio@symbolic.software>"]
 edition = "2018"
+license = "GPL-3.0-only"
 
 [dependencies]
 blake2-rfc = "0.2.18"
